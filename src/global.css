@@ -3,14 +3,14 @@
 }
 
 html {
-  --bg: #efefef;
+  --bg: #182722;
   --fg: #1e1e1e;
   --gray: #555;
   --light-gray: #ccc;
   --shadow: #e6e6e6;
   --success: rgb(90, 206, 132);
   --primary: #ff585d;
-  --secondary: #0072ce;
+  --secondary: #00ce4f;
 
   background-color: var(--bg);
   color: var(--fg);
@@ -23,6 +23,7 @@ html {
 body {
   margin: 0;
   padding: 1em;
+  background-color: #182722;
 }
 
 main {
@@ -87,7 +88,7 @@ button.link {
 [disabled] button,
 button[disabled] {
   box-shadow: none;
-  background-color: var(--light-gray);
+  background-color:#182722;
   color: gray;
   cursor: not-allowed;
   transform: none;
@@ -201,4 +202,23 @@ aside footer *:last-child {
   input:focus {
     box-shadow: 0 0 10em rgba(255, 255, 255, 0.02) inset;
   }
+}
+.logo{
+  max-width: 15%;
+  max-height: 15%;
+}
+
+.nav-link{
+  color: #00e091;
+}
+
+.bg-light{
+  --bg: #182722;
+}
+.card{
+  background-color: #dc1fff;
+}
+.btn-primary{
+  background-color: #00e091;
+  color: #1e1e1e;
 }

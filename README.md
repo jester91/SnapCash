@@ -4,6 +4,12 @@ snapCash
 This [React] app was initialized with [create-near-app]
 
 
+Preview of the DApp
+Simple Money and memo sending application based on the NEAR.
+
+![Screenshot](preview.png)
+![Screenshot](preview2.png)
+
 Quick Start
 ===========
 

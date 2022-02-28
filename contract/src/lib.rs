@@ -1,72 +1,96 @@
 /*
- * This is an example of a Rust smart contract with two simple, symmetric functions:
- *
- * 1. set_greeting: accepts a greeting, such as "howdy", and records it for the user (account_id)
- *    who sent the request
- * 2. get_greeting: accepts an account_id and returns the greeting saved for it, defaulting to
- *    "Hello"
- *
- * Learn more about writing NEAR smart contracts with Rust:
- * https://github.com/near/near-sdk-rs
- *
+                                                                                                                                
+                                                                                                                               
+                                                                      
+                                          #@@@@(                      
+                                    *@@@@@@@@@@@@@@@@%                
+                                 ,@@@@@@@@@@@@@@@@@@@@@@@             
+                               (@@@@@@@@@@@@@@@@@@      @ &@@@@@@     
+                             .@@@@@@@@@@@@@@@@@@          @@@@@@@.    
+                   .((/.    @@@@@@@@@@@@@@@@@@@(           %@@@@      
+               @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*                      
+            #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&                      
+           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.                     
+          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&              
+         @@@@@@@@@&@@@@,  .&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           
+        #@@(           *@@@@@@/  .@@@@@@@@@@@@@@@@@@@@@@@@@@@         
+        @@            @@@#  @@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@        
+       *@/            @@@(  @@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@&       
+    #@@@@@           @@@@@@@@@@@@@@@@& @@@@@@@@@    .@@@@@@@@@@       
+   @@@@@@@@         @@@@@@@@@@@@@@@@@.#@@@@@@@@@        @@@@@@,       
+    @@@@@@,           @@@@@@@@@@@@@@@ @@@@@@@@@.         @@@@@        
+                       @@@@@@*@@@@@@ @@@@@@@@@.          *@@@         
+                       %@@@@@@@@@@@ @@@@@@@@@            %@@          
+                       &@@@@@@@@@ @@@@@@@@@@@@@&     ,@@, @           
+                        &@@@@( %@@@@@@@@            @@@@@@            
+                             @@@@@@@@                @@@@             
+                            &@@@@@%                                   
+                           &@@@@                                      
+                          @@@&                                        
+                        @@#                                           
+                     .%                                                        
  */
 
 // To conserve gas, efficient serialization is achieved through Borsh (http://borsh.io/)
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::{env, near_bindgen, setup_alloc};
 use near_sdk::collections::LookupMap;
+use near_sdk::{env, near_bindgen, setup_alloc, AccountId, Promise};
 
 setup_alloc!();
 
-// Structs in Rust are similar to other languages, and may include impl keyword as shown below
-// Note: the names of the structs are not important when calling the smart contract, but the function names are
+
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize)]
-pub struct Welcome {
-    records: LookupMap<String, String>,
+pub struct SnapCash {
+    memo: LookupMap<String, Vec<String>>,
 }
 
-impl Default for Welcome {
-  fn default() -> Self {
-    Self {
-      records: LookupMap::new(b"a".to_vec()),
-    }
-  }
-}
-
-#[near_bindgen]
-impl Welcome {
-    pub fn set_greeting(&mut self, message: String) {
-        let account_id = env::signer_account_id();
-
-        // Use env::log to record logs permanently to the blockchain!
-        env::log(format!("Saving greeting '{}' for account '{}'", message, account_id,).as_bytes());
-
-        self.records.insert(&account_id, &message);
-    }
-
-    // `match` is similar to `switch` in other languages; here we use it to default to "Hello" if
-    // self.records.get(&account_id) is not yet defined.
-    // Learn more: https://doc.rust-lang.org/book/ch06-02-match.html#matching-with-optiont
-    pub fn get_greeting(&self, account_id: String) -> String {
-        match self.records.get(&account_id) {
-            Some(greeting) => greeting,
-            None => "Hello".to_string(),
+impl Default for SnapCash {
+    fn default() -> Self {
+        Self {
+            memo: LookupMap::new(b"memo".to_vec()),
         }
     }
 }
 
-/*
- * The rest of this file holds the inline tests for the code above
- * Learn more about Rust tests: https://doc.rust-lang.org/book/ch11-01-writing-tests.html
- *
- * To run from contract directory:
- * cargo test -- --nocapture
- *
- * From project root, to run in combination with frontend tests:
- * yarn test
- *
- */
+#[near_bindgen]
+impl SnapCash {
+    //change method adding info/changing on blockchain
+
+    pub fn add_memo(&mut self, memo_text: String, price: String) {
+        let account_id = env::signer_account_id();
+        let contains_user = self.memo.contains_key(&account_id);
+
+        if contains_user {
+            let mut temporary_list = match self.memo.get(&account_id) {
+                Some(y) => y, //y is the amount/vector of memos
+                None => vec![],
+            };
+
+            temporary_list.push(memo_text + " || " + &price + "NEAR");
+
+            self.memo.insert(&account_id, &temporary_list);
+        } else {
+            let new_vec = vec![memo_text + " || " + &price + "NEAR"];
+            self.memo.insert(&account_id, &new_vec);
+        }
+    }
+    //sending the near to the account
+    pub fn transfer_near(&mut self, account_id: AccountId, amount: f64) {
+        Promise::new(account_id).transfer(amount as u128);
+    }
+
+    //view methods
+
+    pub fn get_memos(self, user: String) -> Vec<String> {
+        match self.memo.get(&user) {
+            Some(y) => y, //vector that contains all of the user memo example ['test_memo','test_memo2']
+            None => vec![], //else this will return an empty vector
+        }
+    }
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -96,26 +120,26 @@ mod tests {
     }
 
     #[test]
-    fn set_then_get_greeting() {
+    fn set_then_get_memo() {
         let context = get_context(vec![], false);
         testing_env!(context);
-        let mut contract = Welcome::default();
-        contract.set_greeting("howdy".to_string());
+        let mut contract = SnapCash::default();
+        contract.get_memos("Sup".to_string());
         assert_eq!(
             "howdy".to_string(),
-            contract.get_greeting("bob_near".to_string())
+            contract.add_memo("bob_near".to_string(), "123".to_string())
         );
     }
 
     #[test]
-    fn get_default_greeting() {
+    fn get_default_memo() {
         let context = get_context(vec![], true);
         testing_env!(context);
-        let contract = Welcome::default();
+        let contract = SnapCash::default();
         // this test did not call set_greeting so should return the default "Hello" greeting
         assert_eq!(
             "Hello".to_string(),
-            contract.get_greeting("francis.near".to_string())
+            contract.add_memo("francis.near".to_string(), "321".to_string())
         );
     }
 }

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import PropTypes from "prop-types";
 
-
 // React Bootstrap
 import { Card, Button, Form } from "react-bootstrap";
 
@@ -28,7 +27,7 @@ const MoneyMemo = (props) => {
         " I think you're missing the point of the memo... you need to type something in it"
       );
     } else {
-      console.log(" you wrote something cool....");
+      console.log("Send some nice words....");
 
       // Save Memo to Blockchain
       await window.contract.add_memo({
@@ -38,14 +37,14 @@ const MoneyMemo = (props) => {
       });
 
       // Send Near tokens using smart contract
-      await window.contract.transfer_money({
+      await window.contract.transfer_near({
         account_id: recipientField.current.value,
         amount: parseInt(
           window.utils.format.parseNearAmount(nearField.current.value)
         ),
       });
 
-      alert("Money Sent");
+      alert("Money Sent, thanks for using my App");
     }
     changeButtonState(false);
   };
@@ -53,28 +52,28 @@ const MoneyMemo = (props) => {
   return (
     <Card style={{ marginTop: "3vh" }}>
       <Card.Body>
-        <Card.Title>Send NEAR</Card.Title>
+        <Card.Title>Send Love/NEAR</Card.Title>
         <Form>
-          <Form.Group className='mb-3'>
+          <Form.Group className="mb-3">
             <Form.Label>Recipient</Form.Label>
             <Form.Control
               ref={recipientField}
-              placeholder='example.testnet'
+              placeholder="example.testnet"
             ></Form.Control>
           </Form.Group>
           <Form.Group>
             <Form.Label>Amount</Form.Label>
             <Form.Control
               ref={nearField}
-              placeholder='Enter NEAR Value'
+              placeholder="Enter the amount of the NEAR "
             ></Form.Control>
           </Form.Group>
           <Form.Group>
             <Form.Label>Memo Field</Form.Label>
             <Form.Control
               ref={memoField}
-              placeholder='Write Something Cool'
-              as='textarea'
+              placeholder="Write Something Cool"
+              as="textarea"
               rows={5}
             ></Form.Control>
           </Form.Group>
@@ -83,7 +82,7 @@ const MoneyMemo = (props) => {
           disabled={buttonState}
           onClick={submitButton}
           style={{ marginTop: "3vh" }}
-          variant='primary'
+          variant="primary"
         >
           Send NEAR
         </Button>

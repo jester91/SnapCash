@@ -21,19 +21,19 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 export default function App() {
   return (
     <Router>
-      <Navbar bg='light' expand='lg'>
+      <Navbar bg="#182722;" expand="lg">
         <Container>
-          <Navbar.Brand href='/'>
-            <img src={Logo}></img>
+          <Navbar.Brand href="/">
+            <img className="logo" src={Logo}></img>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='me-auto'></Nav>
-            <Nav.Link href='/transactions'>Transactions</Nav.Link>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto"></Nav>
+            <Nav.Link href="/transactions">Transactions</Nav.Link>
             <Nav.Link
               onClick={window.walletConnection.isSignedIn() ? logout : login}
             >
-              {/* add code here for login */}
+              
               {window.walletConnection.isSignedIn()
                 ? window.accountId
                 : "Login"}
@@ -42,27 +42,27 @@ export default function App() {
         </Container>
       </Navbar>
       <Container>
-        {/* fix code here */}
+        
         {window.walletConnection.isSignedIn() ? (
           <Row
-            className='d-flex justify-content-center'
+            className="d-flex justify-content-center"
             style={{ marginTop: "10px" }}
           >
             <Switch>
-              <Route exact path='/'>
+              <Route exact path="/">
                 <MoneyMemo />
               </Route>
-              <Route exact path='/transactions'>
+              <Route exact path="/transactions">
                 <Transactions />
               </Route>
             </Switch>
           </Row>
         ) : (
-          <Row className='d-flex justify-content-center'>
+          <Row className="d-flex justify-content-center">
             <Card>
               <Card.Body>
                 {" "}
-                <Card.Title>Please Sign In</Card.Title>
+                <Card.Title>Please Sign In to your wallet</Card.Title>
               </Card.Body>
             </Card>
           </Row>
