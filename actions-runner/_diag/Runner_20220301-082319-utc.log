@@ -1,0 +1,187 @@
+[2022-03-01 08:23:19Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO HostContext] Well known config file 'Credentials': 'D:\Projects\CashIO\snapCash\actions-runner\.credentials'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO HostContext] Well known config file 'Runner': 'D:\Projects\CashIO\snapCash\actions-runner\.runner'
+[2022-03-01 08:23:19Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2022-03-01 08:23:19Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19042.
+[2022-03-01 08:23:19Z INFO Listener] Version: 2.287.1
+[2022-03-01 08:23:19Z INFO Listener] Commit: b4e17c4fee3674494ffe88c5e06e42acb6788a37
+[2022-03-01 08:23:19Z INFO Listener] Culture: en-GB
+[2022-03-01 08:23:19Z INFO Listener] UI Culture: en-GB
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO Listener] Validating directory permissions for: 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO CommandLineParser] Parse
+[2022-03-01 08:23:19Z INFO CommandLineParser] Parsing 5 args
+[2022-03-01 08:23:19Z INFO CommandLineParser] parsing argument
+[2022-03-01 08:23:19Z INFO CommandLineParser] HasArgs: False
+[2022-03-01 08:23:19Z INFO CommandLineParser] Adding Command: configure
+[2022-03-01 08:23:19Z INFO CommandLineParser] parsing argument
+[2022-03-01 08:23:19Z INFO CommandLineParser] HasArgs: True
+[2022-03-01 08:23:19Z INFO CommandLineParser] arg: url
+[2022-03-01 08:23:19Z INFO CommandLineParser] parsing argument
+[2022-03-01 08:23:19Z INFO CommandLineParser] HasArgs: True
+[2022-03-01 08:23:19Z INFO CommandLineParser] Adding option 'url': 'https://github.com/jester91/SnapCash'
+[2022-03-01 08:23:19Z INFO CommandLineParser] parsing argument
+[2022-03-01 08:23:19Z INFO CommandLineParser] HasArgs: True
+[2022-03-01 08:23:19Z INFO CommandLineParser] arg: token
+[2022-03-01 08:23:19Z INFO CommandLineParser] parsing argument
+[2022-03-01 08:23:19Z INFO CommandLineParser] HasArgs: True
+[2022-03-01 08:23:19Z INFO CommandLineParser] Adding option 'token': '***'
+[2022-03-01 08:23:19Z INFO Listener] Arguments parsed
+[2022-03-01 08:23:19Z INFO Runner] ExecuteCommand
+[2022-03-01 08:23:19Z INFO ConfigurationStore] currentAssemblyLocation: D:\Projects\CashIO\snapCash\actions-runner\bin\Runner.Listener.dll
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO ConfigurationStore] binPath: D:\Projects\CashIO\snapCash\actions-runner\bin
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO ConfigurationStore] RootFolder: D:\Projects\CashIO\snapCash\actions-runner
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO HostContext] Well known config file 'Runner': 'D:\Projects\CashIO\snapCash\actions-runner\.runner'
+[2022-03-01 08:23:19Z INFO ConfigurationStore] ConfigFilePath: D:\Projects\CashIO\snapCash\actions-runner\.runner
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO HostContext] Well known config file 'Credentials': 'D:\Projects\CashIO\snapCash\actions-runner\.credentials'
+[2022-03-01 08:23:19Z INFO ConfigurationStore] CredFilePath: D:\Projects\CashIO\snapCash\actions-runner\.credentials
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO HostContext] Well known config file 'MigratedCredentials': 'D:\Projects\CashIO\snapCash\actions-runner\.credentials_migrated'
+[2022-03-01 08:23:19Z INFO ConfigurationStore] MigratedCredFilePath: D:\Projects\CashIO\snapCash\actions-runner\.credentials_migrated
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:19Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:19Z INFO HostContext] Well known config file 'Service': 'D:\Projects\CashIO\snapCash\actions-runner\.service'
+[2022-03-01 08:23:19Z INFO ConfigurationStore] ServiceConfigFilePath: D:\Projects\CashIO\snapCash\actions-runner\.service
+[2022-03-01 08:23:19Z INFO CommandSettings] Flag 'help': 'False'
+[2022-03-01 08:23:19Z INFO CommandSettings] Flag 'version': 'False'
+[2022-03-01 08:23:19Z INFO CommandSettings] Flag 'commit': 'False'
+[2022-03-01 08:23:19Z INFO CommandSettings] Flag 'check': 'False'
+[2022-03-01 08:23:19Z INFO CommandSettings] Command 'configure': 'True'
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: 
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: |        ____ _ _   _   _       _          _        _   _                      |
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: |       / ___(_) |_| | | |_   _| |__      / \   ___| |_(_) ___  _ __  ___      |
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: |      | |  _| | __| |_| | | | | '_ \    / _ \ / __| __| |/ _ \| '_ \/ __|     |
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: |      | |_| | | |_|  _  | |_| | |_) |  / ___ \ (__| |_| | (_) | | | \__ \     |
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: |       \____|_|\__|_| |_|\__,_|_.__/  /_/   \_\___|\__|_|\___/|_| |_|___/     |
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: |                                                                              |
+[2022-03-01 08:23:19Z INFO Terminal] WRITE: |                       
+[2022-03-01 08:23:19Z INFO Terminal] WRITE: Self-hosted runner registration
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE:                         |
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: |                                                                              |
+[2022-03-01 08:23:19Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2022-03-01 08:23:19Z INFO ConfigurationManager] ConfigureAsync
+[2022-03-01 08:23:19Z INFO ConfigurationStore] IsConfigured()
+[2022-03-01 08:23:19Z INFO ConfigurationStore] IsConfigured: False
+[2022-03-01 08:23:19Z INFO ConfigurationManager] Is configured: False
+[2022-03-01 08:23:19Z INFO CommandSettings] Arg 'url': 'https://github.com/jester91/SnapCash'
+[2022-03-01 08:23:19Z INFO CommandSettings] Remove url from Arg dictionary.
+[2022-03-01 08:23:19Z INFO CommandSettings] Arg 'token': '***'
+[2022-03-01 08:23:19Z INFO CommandSettings] Remove token from Arg dictionary.
+[2022-03-01 08:23:19Z INFO ConfigurationManager] Http response code: OK from 'POST https://api.github.com/actions/runner-registration'
+[2022-03-01 08:23:19Z INFO ConfigurationManager] cred retrieved via GitHub auth
+[2022-03-01 08:23:19Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2022-03-01 08:23:19Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-03-01 08:23:19Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-03-01 08:23:19Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-03-01 08:23:19Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-03-01 08:23:19Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-03-01 08:23:20Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-03-01 08:23:20Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-03-01 08:23:20Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-03-01 08:23:20Z INFO Terminal] WRITE LINE: 
+[2022-03-01 08:23:20Z INFO ConfigurationManager] Test Connection complete.
+[2022-03-01 08:23:20Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:23:20Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:23:20Z INFO HostContext] Well known config file 'RSACredentials': 'D:\Projects\CashIO\snapCash\actions-runner\.credentials_rsaparams'
+[2022-03-01 08:23:20Z INFO RSAEncryptedFileKeyManager] Found existing RSA key parameters file D:\Projects\CashIO\snapCash\actions-runner\.credentials_rsaparams
+[2022-03-01 08:23:20Z INFO CommandSettings] Arg 'runnergroup': ''
+[2022-03-01 08:23:20Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-03-01 08:23:20Z INFO PromptManager] ReadValue
+[2022-03-01 08:23:20Z INFO Terminal] WRITE: Enter the name of the runner group to add this runner to: 
+[2022-03-01 08:23:20Z INFO Terminal] WRITE: [press Enter for Default] 
+[2022-03-01 08:23:20Z INFO Terminal] READ LINE
+[2022-03-01 08:23:22Z INFO Terminal] Read value: ''
+[2022-03-01 08:23:22Z INFO PromptManager] Falling back to the default: 'Default'
+[2022-03-01 08:23:22Z INFO Terminal] WRITE LINE: 
+[2022-03-01 08:23:22Z INFO ConfigurationManager] Found a self-hosted runner group with id 1 and name Default
+[2022-03-01 08:23:22Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2022-03-01 08:23:22Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2022-03-01 08:23:22Z INFO CommandSettings] Arg 'name': ''
+[2022-03-01 08:23:22Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-03-01 08:23:22Z INFO PromptManager] ReadValue
+[2022-03-01 08:23:22Z INFO Terminal] WRITE: Enter the name of runner: 
+[2022-03-01 08:23:22Z INFO Terminal] WRITE: [press Enter for DESKTOP-KUO250C] 
+[2022-03-01 08:23:22Z INFO Terminal] READ LINE
+[2022-03-01 08:23:26Z INFO Terminal] Read value: ''
+[2022-03-01 08:23:26Z INFO PromptManager] Falling back to the default: 'DESKTOP-KUO250C'
+[2022-03-01 08:23:26Z INFO Terminal] WRITE LINE: 
+[2022-03-01 08:23:26Z INFO CommandSettings] Arg 'labels': ''
+[2022-03-01 08:23:26Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-03-01 08:23:26Z INFO PromptManager] ReadValue
+[2022-03-01 08:23:26Z INFO Terminal] WRITE: This runner will have the following labels: 'self-hosted', 'Windows', 'X64' 
+Enter any additional labels (ex. label-1,label-2): 
+[2022-03-01 08:23:26Z INFO Terminal] WRITE: [press Enter to skip] 
+[2022-03-01 08:23:26Z INFO Terminal] READ LINE
+[2022-03-01 08:23:31Z INFO Terminal] Read value: ''
+[2022-03-01 08:23:31Z INFO Terminal] WRITE LINE: 
+[2022-03-01 08:23:31Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2022-03-01 08:23:32Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2022-03-01 08:23:32Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2022-03-01 08:23:32Z INFO ConfigurationStore] Saving OAuth credential @ D:\Projects\CashIO\snapCash\actions-runner\.credentials
+[2022-03-01 08:23:32Z INFO ConfigurationStore] Credentials Saved.
+[2022-03-01 08:23:32Z INFO ConfigurationStore] HasCredentials()
+[2022-03-01 08:23:32Z INFO ConfigurationStore] stored True
+[2022-03-01 08:23:32Z INFO CredentialManager] GetCredentialProvider
+[2022-03-01 08:23:32Z INFO CredentialManager] Creating type OAuth
+[2022-03-01 08:23:32Z INFO CredentialManager] Creating credential type: OAuth
+[2022-03-01 08:23:32Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Projects\CashIO\snapCash\actions-runner\.credentials_rsaparams
+[2022-03-01 08:23:32Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2022-03-01 08:23:32Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-03-01 08:23:32Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-03-01 08:23:32Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-03-01 08:23:32Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-03-01 08:23:32Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-03-01 08:23:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-03-01 08:23:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-03-01 08:23:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-03-01 08:23:32Z WARN GitHubActionsService] Authentication failed with status code 401.
+Transfer-Encoding: chunked
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: 43d7f2e2-e9cb-461b-b521-d65fdce9f4c0
+ActivityId: 57489818-87fa-4a44-8390-020fbf61a6f5
+X-TFS-Session: 1ae8bab3-a405-4040-b6d6-bd642c5695fb
+X-VSS-E2EID: 50e8ea46-b538-4556-9ee0-ad2bb81d101a
+X-VSS-SenderDeploymentId: 1139089e-89fd-ce7a-6851-1ac6328a300e
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-Cache: CONFIG_NOCACHE
+X-MSEdge-Ref: Ref A: DF3B92A7EF7B458CABB4429AF6E62621 Ref B: BUD01EDGE0321 Ref C: 2022-03-01T08:23:31Z
+Date: Tue, 01 Mar 2022 08:23:31 GMT
+
+[2022-03-01 08:23:32Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Projects\CashIO\snapCash\actions-runner\.credentials_rsaparams
+[2022-03-01 08:23:32Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Projects\CashIO\snapCash\actions-runner\.credentials_rsaparams
+[2022-03-01 08:23:33Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2022-03-01 08:23:33Z INFO CommandSettings] Arg 'work': ''
+[2022-03-01 08:23:33Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-03-01 08:23:33Z INFO PromptManager] ReadValue
+[2022-03-01 08:23:33Z INFO Terminal] WRITE: Enter name of work folder: 
+[2022-03-01 08:23:33Z INFO Terminal] WRITE: [press Enter for _work] 
+[2022-03-01 08:23:33Z INFO Terminal] READ LINE
+[2022-03-01 08:23:42Z INFO Terminal] Read value: 'snapcash'
+[2022-03-01 08:23:42Z INFO ConfigurationStore] Saving runner settings.
+[2022-03-01 08:23:42Z INFO ConfigurationStore] Settings Saved.
+[2022-03-01 08:23:42Z INFO Terminal] WRITE LINE: 
+[2022-03-01 08:23:42Z INFO Terminal] WRITE LINE: 
+[2022-03-01 08:23:42Z INFO CommandSettings] Flag 'runasservice': 'False'
+[2022-03-01 08:23:42Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-03-01 08:23:42Z INFO PromptManager] ReadValue
+[2022-03-01 08:23:42Z INFO Terminal] WRITE: Would you like to run the runner as service? (Y/N) 
+[2022-03-01 08:23:42Z INFO Terminal] WRITE: [press Enter for N] 
+[2022-03-01 08:23:42Z INFO Terminal] READ LINE
+[2022-03-01 08:23:51Z INFO Terminal] Read value: 'n'
+[2022-03-01 08:23:51Z INFO Listener] Runner execution has finished with return code 0

@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 21,
+  "agentName": "DESKTOP-KUO250C",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelines.actions.githubusercontent.com/Jnh4HP2gntAOhbFpCKtbM7LlrJUii0gygp0biIHYmrNxLiU30N",
+  "gitHubUrl": "https://github.com/jester91/SnapCash",
+  "workFolder": "snapcash"
+}

@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "jester91/SnapCash",
+  "pipelineDirectory": "SnapCash",
+  "workspaceDirectory": "SnapCash\\SnapCash",
+  "repositories": {
+    "jester91/SnapCash": {
+      "repositoryPath": "SnapCash\\SnapCash",
+      "lastRunOn": "03/01/2022 09:24:11 +01:00"
+    }
+  },
+  "lastRunOn": "03/01/2022 09:25:37 +01:00"
+}

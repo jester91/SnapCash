@@ -1,0 +1,2497 @@
+[2022-03-01 08:25:35Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:36Z INFO HostContext] Well known config file 'Credentials': 'D:\Projects\CashIO\snapCash\actions-runner\.credentials'
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:36Z INFO HostContext] Well known config file 'Runner': 'D:\Projects\CashIO\snapCash\actions-runner\.runner'
+[2022-03-01 08:25:36Z INFO Worker] Version: 2.287.1
+[2022-03-01 08:25:36Z INFO Worker] Commit: b4e17c4fee3674494ffe88c5e06e42acb6788a37
+[2022-03-01 08:25:36Z INFO Worker] Culture: en-GB
+[2022-03-01 08:25:36Z INFO Worker] UI Culture: en-GB
+[2022-03-01 08:25:36Z INFO Worker] Waiting to receive the job message from the channel.
+[2022-03-01 08:25:36Z INFO ProcessChannel] Receiving message of length 37160, with hash '203644488403cc07e621ad50022babaf28e8cb707360f6033603c0a90dbd5ed5'
+[2022-03-01 08:25:36Z INFO Worker] Message received.
+[2022-03-01 08:25:36Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/react.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "c28f0f2d-4c36-5b18-4fd9-c2e00abe08ba",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-node",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 3,
+        "file": 1,
+        "line": 23,
+        "col": 13,
+        "expr": "format('Use Node.js {0}', matrix.node-version)"
+      },
+      "contextName": "__actions_setup-node",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 26,
+        "col": 9,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 26,
+              "col": 9,
+              "lit": "node-version"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 26,
+              "col": 23,
+              "expr": "matrix.node-version"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 27,
+              "col": 9,
+              "lit": "cache"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 27,
+              "col": 16,
+              "lit": "npm"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "ae961046-74db-5234-d521-c831e1629984",
+      "name": "__actions_setup-node"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 28,
+              "col": 12,
+              "lit": "npm i"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "b62fe02e-bef4-51fa-f31e-31f9f5a73bf7",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 29,
+              "col": 12,
+              "lit": "npm test"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "2e2ba6b7-cce6-5aa9-0f48-93e10c5178e7",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 30,
+              "col": 12,
+              "lit": "npm run build"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "b5d80b4d-d330-5731-5147-068c3c28a6df",
+      "name": "__run_3"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": "en-US"
+    },
+    "system.pipelineStartTime": {
+      "value": "2022-03-01 08:25:32+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "5"
+    },
+    "build.containerId": {
+      "value": "145116"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/react.yml"
+    },
+    "system.phaseDisplayName": {
+      "value": "build"
+    },
+    "system.phaseId": {
+      "value": "6884a131-87da-5381-61f3-d7acc3b91d76"
+    },
+    "system.phaseName": {
+      "value": "build"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "build._16_x"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "2"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "2"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.jobDisplayName": {
+      "value": "build (16.x)"
+    },
+    "system.jobId": {
+      "value": "c269f388-e93f-55df-e42c-8ad0a472b48b"
+    },
+    "system.jobName": {
+      "value": "_16_x"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Discussions\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"Packages\":\"write\",\"Pages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 25,
+    "planId": "41bf9e03-d4b0-4129-812c-00c4c3ac75f5",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/5",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "SnapCash"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "jester91"
+    }
+  },
+  "timeline": {
+    "id": "41bf9e03-d4b0-4129-812c-00c4c3ac75f5",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "c269f388-e93f-55df-e42c-8ad0a472b48b",
+  "jobDisplayName": "build (16.x)",
+  "jobName": "_16_x",
+  "requestId": 10,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "1e880930-a374-4da2-9708-d512e1c898e3",
+          "ServerName": "Jnh4HP2gntAOhbFpCKtbM7LlrJUii0gygp0biIHYmrNxLiU30N",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/Jnh4HP2gntAOhbFpCKtbM7LlrJUii0gygp0biIHYmrNxLiU30N/"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/Jnh4HP2gntAOhbFpCKtbM7LlrJUii0gygp0biIHYmrNxLiU30N/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/pull/1/merge"
+        },
+        {
+          "k": "sha",
+          "v": "c3deda2e5cfd931ddfbf5f5dd3ba055c0888c85f"
+        },
+        {
+          "k": "repository",
+          "v": "jester91/SnapCash"
+        },
+        {
+          "k": "repository_owner",
+          "v": "jester91"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/jester91/SnapCash.git"
+        },
+        {
+          "k": "run_id",
+          "v": "1914985245"
+        },
+        {
+          "k": "run_number",
+          "v": "1"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "actor",
+          "v": "jester91"
+        },
+        {
+          "k": "workflow",
+          "v": "Node.js CI"
+        },
+        {
+          "k": "head_ref",
+          "v": "jester91-action-1"
+        },
+        {
+          "k": "base_ref",
+          "v": "main"
+        },
+        {
+          "k": "event_name",
+          "v": "pull_request"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "action",
+                "v": "opened"
+              },
+              {
+                "k": "number",
+                "v": 1.0
+              },
+              {
+                "k": "pull_request",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "_links",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "comments",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/issues/1/comments"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "commits",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/pulls/1/commits"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "html",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://github.com/jester91/SnapCash/pull/1"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "issue",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/issues/1"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "review_comment",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/pulls/comments{/number}"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "review_comments",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/pulls/1/comments"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "self",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/pulls/1"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "statuses",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/statuses/d74d0806120b8a94fa5a3034e097dfbc042f22dd"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "active_lock_reason",
+                      "v": null
+                    },
+                    {
+                      "k": "additions",
+                      "v": 30.0
+                    },
+                    {
+                      "k": "assignee",
+                      "v": null
+                    },
+                    {
+                      "k": "assignees",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "author_association",
+                      "v": "OWNER"
+                    },
+                    {
+                      "k": "auto_merge",
+                      "v": null
+                    },
+                    {
+                      "k": "base",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "label",
+                            "v": "jester91:main"
+                          },
+                          {
+                            "k": "ref",
+                            "v": "main"
+                          },
+                          {
+                            "k": "repo",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "allow_auto_merge",
+                                  "v": false
+                                },
+                                {
+                                  "k": "allow_forking",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_merge_commit",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_rebase_merge",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_squash_merge",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_update_branch",
+                                  "v": false
+                                },
+                                {
+                                  "k": "archive_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/{archive_format}{/ref}"
+                                },
+                                {
+                                  "k": "archived",
+                                  "v": false
+                                },
+                                {
+                                  "k": "assignees_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/assignees{/user}"
+                                },
+                                {
+                                  "k": "blobs_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/blobs{/sha}"
+                                },
+                                {
+                                  "k": "branches_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/branches{/branch}"
+                                },
+                                {
+                                  "k": "clone_url",
+                                  "v": "https://github.com/jester91/SnapCash.git"
+                                },
+                                {
+                                  "k": "collaborators_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/collaborators{/collaborator}"
+                                },
+                                {
+                                  "k": "comments_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/comments{/number}"
+                                },
+                                {
+                                  "k": "commits_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/commits{/sha}"
+                                },
+                                {
+                                  "k": "compare_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/compare/{base}...{head}"
+                                },
+                                {
+                                  "k": "contents_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/contents/{+path}"
+                                },
+                                {
+                                  "k": "contributors_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/contributors"
+                                },
+                                {
+                                  "k": "created_at",
+                                  "v": "2022-02-16T22:14:29Z"
+                                },
+                                {
+                                  "k": "default_branch",
+                                  "v": "main"
+                                },
+                                {
+                                  "k": "delete_branch_on_merge",
+                                  "v": false
+                                },
+                                {
+                                  "k": "deployments_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/deployments"
+                                },
+                                {
+                                  "k": "description",
+                                  "v": "Near App with Rust contract."
+                                },
+                                {
+                                  "k": "disabled",
+                                  "v": false
+                                },
+                                {
+                                  "k": "downloads_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/downloads"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/events"
+                                },
+                                {
+                                  "k": "fork",
+                                  "v": false
+                                },
+                                {
+                                  "k": "forks",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "forks_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "forks_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/forks"
+                                },
+                                {
+                                  "k": "full_name",
+                                  "v": "jester91/SnapCash"
+                                },
+                                {
+                                  "k": "git_commits_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/commits{/sha}"
+                                },
+                                {
+                                  "k": "git_refs_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/refs{/sha}"
+                                },
+                                {
+                                  "k": "git_tags_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/tags{/sha}"
+                                },
+                                {
+                                  "k": "git_url",
+                                  "v": "git://github.com/jester91/SnapCash.git"
+                                },
+                                {
+                                  "k": "has_downloads",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_issues",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_pages",
+                                  "v": false
+                                },
+                                {
+                                  "k": "has_projects",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_wiki",
+                                  "v": true
+                                },
+                                {
+                                  "k": "homepage",
+                                  "v": null
+                                },
+                                {
+                                  "k": "hooks_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/hooks"
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/jester91/SnapCash"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 460195616.0
+                                },
+                                {
+                                  "k": "is_template",
+                                  "v": false
+                                },
+                                {
+                                  "k": "issue_comment_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/issues/comments{/number}"
+                                },
+                                {
+                                  "k": "issue_events_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/issues/events{/number}"
+                                },
+                                {
+                                  "k": "issues_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/issues{/number}"
+                                },
+                                {
+                                  "k": "keys_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/keys{/key_id}"
+                                },
+                                {
+                                  "k": "labels_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/labels{/name}"
+                                },
+                                {
+                                  "k": "language",
+                                  "v": "JavaScript"
+                                },
+                                {
+                                  "k": "languages_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/languages"
+                                },
+                                {
+                                  "k": "license",
+                                  "v": null
+                                },
+                                {
+                                  "k": "merges_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/merges"
+                                },
+                                {
+                                  "k": "milestones_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/milestones{/number}"
+                                },
+                                {
+                                  "k": "mirror_url",
+                                  "v": null
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "SnapCash"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "R_kgDOG24HIA"
+                                },
+                                {
+                                  "k": "notifications_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/notifications{?since,all,participating}"
+                                },
+                                {
+                                  "k": "open_issues",
+                                  "v": 1.0
+                                },
+                                {
+                                  "k": "open_issues_count",
+                                  "v": 1.0
+                                },
+                                {
+                                  "k": "owner",
+                                  "v": {
+                                    "t": 2,
+                                    "d": [
+                                      {
+                                        "k": "avatar_url",
+                                        "v": "https://avatars.githubusercontent.com/u/50679897?v=4"
+                                      },
+                                      {
+                                        "k": "events_url",
+                                        "v": "https://api.github.com/users/jester91/events{/privacy}"
+                                      },
+                                      {
+                                        "k": "followers_url",
+                                        "v": "https://api.github.com/users/jester91/followers"
+                                      },
+                                      {
+                                        "k": "following_url",
+                                        "v": "https://api.github.com/users/jester91/following{/other_user}"
+                                      },
+                                      {
+                                        "k": "gists_url",
+                                        "v": "https://api.github.com/users/jester91/gists{/gist_id}"
+                                      },
+                                      {
+                                        "k": "gravatar_id",
+                                        "v": ""
+                                      },
+                                      {
+                                        "k": "html_url",
+                                        "v": "https://github.com/jester91"
+                                      },
+                                      {
+                                        "k": "id",
+                                        "v": 50679897.0
+                                      },
+                                      {
+                                        "k": "login",
+                                        "v": "jester91"
+                                      },
+                                      {
+                                        "k": "node_id",
+                                        "v": "MDQ6VXNlcjUwNjc5ODk3"
+                                      },
+                                      {
+                                        "k": "organizations_url",
+                                        "v": "https://api.github.com/users/jester91/orgs"
+                                      },
+                                      {
+                                        "k": "received_events_url",
+                                        "v": "https://api.github.com/users/jester91/received_events"
+                                      },
+                                      {
+                                        "k": "repos_url",
+                                        "v": "https://api.github.com/users/jester91/repos"
+                                      },
+                                      {
+                                        "k": "site_admin",
+                                        "v": false
+                                      },
+                                      {
+                                        "k": "starred_url",
+                                        "v": "https://api.github.com/users/jester91/starred{/owner}{/repo}"
+                                      },
+                                      {
+                                        "k": "subscriptions_url",
+                                        "v": "https://api.github.com/users/jester91/subscriptions"
+                                      },
+                                      {
+                                        "k": "type",
+                                        "v": "User"
+                                      },
+                                      {
+                                        "k": "url",
+                                        "v": "https://api.github.com/users/jester91"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "k": "private",
+                                  "v": false
+                                },
+                                {
+                                  "k": "pulls_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/pulls{/number}"
+                                },
+                                {
+                                  "k": "pushed_at",
+                                  "v": "2022-03-01T08:17:27Z"
+                                },
+                                {
+                                  "k": "releases_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/releases{/id}"
+                                },
+                                {
+                                  "k": "size",
+                                  "v": 558.0
+                                },
+                                {
+                                  "k": "ssh_url",
+                                  "v": "git@github.com:jester91/SnapCash.git"
+                                },
+                                {
+                                  "k": "stargazers_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "stargazers_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/stargazers"
+                                },
+                                {
+                                  "k": "statuses_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/statuses/{sha}"
+                                },
+                                {
+                                  "k": "subscribers_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/subscribers"
+                                },
+                                {
+                                  "k": "subscription_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/subscription"
+                                },
+                                {
+                                  "k": "svn_url",
+                                  "v": "https://github.com/jester91/SnapCash"
+                                },
+                                {
+                                  "k": "tags_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/tags"
+                                },
+                                {
+                                  "k": "teams_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/teams"
+                                },
+                                {
+                                  "k": "topics",
+                                  "v": {
+                                    "t": 1
+                                  }
+                                },
+                                {
+                                  "k": "trees_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/trees{/sha}"
+                                },
+                                {
+                                  "k": "updated_at",
+                                  "v": "2022-02-16T22:16:03Z"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash"
+                                },
+                                {
+                                  "k": "visibility",
+                                  "v": "public"
+                                },
+                                {
+                                  "k": "watchers",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "watchers_count",
+                                  "v": 0.0
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "sha",
+                            "v": "276b64f04345159893116e232e2918d91aa9190d"
+                          },
+                          {
+                            "k": "user",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "avatar_url",
+                                  "v": "https://avatars.githubusercontent.com/u/50679897?v=4"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/users/jester91/events{/privacy}"
+                                },
+                                {
+                                  "k": "followers_url",
+                                  "v": "https://api.github.com/users/jester91/followers"
+                                },
+                                {
+                                  "k": "following_url",
+                                  "v": "https://api.github.com/users/jester91/following{/other_user}"
+                                },
+                                {
+                                  "k": "gists_url",
+                                  "v": "https://api.github.com/users/jester91/gists{/gist_id}"
+                                },
+                                {
+                                  "k": "gravatar_id",
+                                  "v": ""
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/jester91"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 50679897.0
+                                },
+                                {
+                                  "k": "login",
+                                  "v": "jester91"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "MDQ6VXNlcjUwNjc5ODk3"
+                                },
+                                {
+                                  "k": "organizations_url",
+                                  "v": "https://api.github.com/users/jester91/orgs"
+                                },
+                                {
+                                  "k": "received_events_url",
+                                  "v": "https://api.github.com/users/jester91/received_events"
+                                },
+                                {
+                                  "k": "repos_url",
+                                  "v": "https://api.github.com/users/jester91/repos"
+                                },
+                                {
+                                  "k": "site_admin",
+                                  "v": false
+                                },
+                                {
+                                  "k": "starred_url",
+                                  "v": "https://api.github.com/users/jester91/starred{/owner}{/repo}"
+                                },
+                                {
+                                  "k": "subscriptions_url",
+                                  "v": "https://api.github.com/users/jester91/subscriptions"
+                                },
+                                {
+                                  "k": "type",
+                                  "v": "User"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/users/jester91"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "body",
+                      "v": "Create react.yml"
+                    },
+                    {
+                      "k": "changed_files",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "closed_at",
+                      "v": null
+                    },
+                    {
+                      "k": "comments",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/issues/1/comments"
+                    },
+                    {
+                      "k": "commits",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/pulls/1/commits"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2022-03-01T08:18:23Z"
+                    },
+                    {
+                      "k": "deletions",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "diff_url",
+                      "v": "https://github.com/jester91/SnapCash/pull/1.diff"
+                    },
+                    {
+                      "k": "draft",
+                      "v": false
+                    },
+                    {
+                      "k": "head",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "label",
+                            "v": "jester91:jester91-action-1"
+                          },
+                          {
+                            "k": "ref",
+                            "v": "jester91-action-1"
+                          },
+                          {
+                            "k": "repo",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "allow_auto_merge",
+                                  "v": false
+                                },
+                                {
+                                  "k": "allow_forking",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_merge_commit",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_rebase_merge",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_squash_merge",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_update_branch",
+                                  "v": false
+                                },
+                                {
+                                  "k": "archive_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/{archive_format}{/ref}"
+                                },
+                                {
+                                  "k": "archived",
+                                  "v": false
+                                },
+                                {
+                                  "k": "assignees_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/assignees{/user}"
+                                },
+                                {
+                                  "k": "blobs_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/blobs{/sha}"
+                                },
+                                {
+                                  "k": "branches_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/branches{/branch}"
+                                },
+                                {
+                                  "k": "clone_url",
+                                  "v": "https://github.com/jester91/SnapCash.git"
+                                },
+                                {
+                                  "k": "collaborators_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/collaborators{/collaborator}"
+                                },
+                                {
+                                  "k": "comments_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/comments{/number}"
+                                },
+                                {
+                                  "k": "commits_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/commits{/sha}"
+                                },
+                                {
+                                  "k": "compare_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/compare/{base}...{head}"
+                                },
+                                {
+                                  "k": "contents_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/contents/{+path}"
+                                },
+                                {
+                                  "k": "contributors_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/contributors"
+                                },
+                                {
+                                  "k": "created_at",
+                                  "v": "2022-02-16T22:14:29Z"
+                                },
+                                {
+                                  "k": "default_branch",
+                                  "v": "main"
+                                },
+                                {
+                                  "k": "delete_branch_on_merge",
+                                  "v": false
+                                },
+                                {
+                                  "k": "deployments_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/deployments"
+                                },
+                                {
+                                  "k": "description",
+                                  "v": "Near App with Rust contract."
+                                },
+                                {
+                                  "k": "disabled",
+                                  "v": false
+                                },
+                                {
+                                  "k": "downloads_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/downloads"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/events"
+                                },
+                                {
+                                  "k": "fork",
+                                  "v": false
+                                },
+                                {
+                                  "k": "forks",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "forks_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "forks_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/forks"
+                                },
+                                {
+                                  "k": "full_name",
+                                  "v": "jester91/SnapCash"
+                                },
+                                {
+                                  "k": "git_commits_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/commits{/sha}"
+                                },
+                                {
+                                  "k": "git_refs_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/refs{/sha}"
+                                },
+                                {
+                                  "k": "git_tags_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/tags{/sha}"
+                                },
+                                {
+                                  "k": "git_url",
+                                  "v": "git://github.com/jester91/SnapCash.git"
+                                },
+                                {
+                                  "k": "has_downloads",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_issues",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_pages",
+                                  "v": false
+                                },
+                                {
+                                  "k": "has_projects",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_wiki",
+                                  "v": true
+                                },
+                                {
+                                  "k": "homepage",
+                                  "v": null
+                                },
+                                {
+                                  "k": "hooks_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/hooks"
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/jester91/SnapCash"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 460195616.0
+                                },
+                                {
+                                  "k": "is_template",
+                                  "v": false
+                                },
+                                {
+                                  "k": "issue_comment_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/issues/comments{/number}"
+                                },
+                                {
+                                  "k": "issue_events_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/issues/events{/number}"
+                                },
+                                {
+                                  "k": "issues_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/issues{/number}"
+                                },
+                                {
+                                  "k": "keys_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/keys{/key_id}"
+                                },
+                                {
+                                  "k": "labels_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/labels{/name}"
+                                },
+                                {
+                                  "k": "language",
+                                  "v": "JavaScript"
+                                },
+                                {
+                                  "k": "languages_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/languages"
+                                },
+                                {
+                                  "k": "license",
+                                  "v": null
+                                },
+                                {
+                                  "k": "merges_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/merges"
+                                },
+                                {
+                                  "k": "milestones_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/milestones{/number}"
+                                },
+                                {
+                                  "k": "mirror_url",
+                                  "v": null
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "SnapCash"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "R_kgDOG24HIA"
+                                },
+                                {
+                                  "k": "notifications_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/notifications{?since,all,participating}"
+                                },
+                                {
+                                  "k": "open_issues",
+                                  "v": 1.0
+                                },
+                                {
+                                  "k": "open_issues_count",
+                                  "v": 1.0
+                                },
+                                {
+                                  "k": "owner",
+                                  "v": {
+                                    "t": 2,
+                                    "d": [
+                                      {
+                                        "k": "avatar_url",
+                                        "v": "https://avatars.githubusercontent.com/u/50679897?v=4"
+                                      },
+                                      {
+                                        "k": "events_url",
+                                        "v": "https://api.github.com/users/jester91/events{/privacy}"
+                                      },
+                                      {
+                                        "k": "followers_url",
+                                        "v": "https://api.github.com/users/jester91/followers"
+                                      },
+                                      {
+                                        "k": "following_url",
+                                        "v": "https://api.github.com/users/jester91/following{/other_user}"
+                                      },
+                                      {
+                                        "k": "gists_url",
+                                        "v": "https://api.github.com/users/jester91/gists{/gist_id}"
+                                      },
+                                      {
+                                        "k": "gravatar_id",
+                                        "v": ""
+                                      },
+                                      {
+                                        "k": "html_url",
+                                        "v": "https://github.com/jester91"
+                                      },
+                                      {
+                                        "k": "id",
+                                        "v": 50679897.0
+                                      },
+                                      {
+                                        "k": "login",
+                                        "v": "jester91"
+                                      },
+                                      {
+                                        "k": "node_id",
+                                        "v": "MDQ6VXNlcjUwNjc5ODk3"
+                                      },
+                                      {
+                                        "k": "organizations_url",
+                                        "v": "https://api.github.com/users/jester91/orgs"
+                                      },
+                                      {
+                                        "k": "received_events_url",
+                                        "v": "https://api.github.com/users/jester91/received_events"
+                                      },
+                                      {
+                                        "k": "repos_url",
+                                        "v": "https://api.github.com/users/jester91/repos"
+                                      },
+                                      {
+                                        "k": "site_admin",
+                                        "v": false
+                                      },
+                                      {
+                                        "k": "starred_url",
+                                        "v": "https://api.github.com/users/jester91/starred{/owner}{/repo}"
+                                      },
+                                      {
+                                        "k": "subscriptions_url",
+                                        "v": "https://api.github.com/users/jester91/subscriptions"
+                                      },
+                                      {
+                                        "k": "type",
+                                        "v": "User"
+                                      },
+                                      {
+                                        "k": "url",
+                                        "v": "https://api.github.com/users/jester91"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "k": "private",
+                                  "v": false
+                                },
+                                {
+                                  "k": "pulls_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/pulls{/number}"
+                                },
+                                {
+                                  "k": "pushed_at",
+                                  "v": "2022-03-01T08:17:27Z"
+                                },
+                                {
+                                  "k": "releases_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/releases{/id}"
+                                },
+                                {
+                                  "k": "size",
+                                  "v": 558.0
+                                },
+                                {
+                                  "k": "ssh_url",
+                                  "v": "git@github.com:jester91/SnapCash.git"
+                                },
+                                {
+                                  "k": "stargazers_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "stargazers_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/stargazers"
+                                },
+                                {
+                                  "k": "statuses_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/statuses/{sha}"
+                                },
+                                {
+                                  "k": "subscribers_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/subscribers"
+                                },
+                                {
+                                  "k": "subscription_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/subscription"
+                                },
+                                {
+                                  "k": "svn_url",
+                                  "v": "https://github.com/jester91/SnapCash"
+                                },
+                                {
+                                  "k": "tags_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/tags"
+                                },
+                                {
+                                  "k": "teams_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/teams"
+                                },
+                                {
+                                  "k": "topics",
+                                  "v": {
+                                    "t": 1
+                                  }
+                                },
+                                {
+                                  "k": "trees_url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash/git/trees{/sha}"
+                                },
+                                {
+                                  "k": "updated_at",
+                                  "v": "2022-02-16T22:16:03Z"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/repos/jester91/SnapCash"
+                                },
+                                {
+                                  "k": "visibility",
+                                  "v": "public"
+                                },
+                                {
+                                  "k": "watchers",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "watchers_count",
+                                  "v": 0.0
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "sha",
+                            "v": "d74d0806120b8a94fa5a3034e097dfbc042f22dd"
+                          },
+                          {
+                            "k": "user",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "avatar_url",
+                                  "v": "https://avatars.githubusercontent.com/u/50679897?v=4"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/users/jester91/events{/privacy}"
+                                },
+                                {
+                                  "k": "followers_url",
+                                  "v": "https://api.github.com/users/jester91/followers"
+                                },
+                                {
+                                  "k": "following_url",
+                                  "v": "https://api.github.com/users/jester91/following{/other_user}"
+                                },
+                                {
+                                  "k": "gists_url",
+                                  "v": "https://api.github.com/users/jester91/gists{/gist_id}"
+                                },
+                                {
+                                  "k": "gravatar_id",
+                                  "v": ""
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/jester91"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 50679897.0
+                                },
+                                {
+                                  "k": "login",
+                                  "v": "jester91"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "MDQ6VXNlcjUwNjc5ODk3"
+                                },
+                                {
+                                  "k": "organizations_url",
+                                  "v": "https://api.github.com/users/jester91/orgs"
+                                },
+                                {
+                                  "k": "received_events_url",
+                                  "v": "https://api.github.com/users/jester91/received_events"
+                                },
+                                {
+                                  "k": "repos_url",
+                                  "v": "https://api.github.com/users/jester91/repos"
+                                },
+                                {
+                                  "k": "site_admin",
+                                  "v": false
+                                },
+                                {
+                                  "k": "starred_url",
+                                  "v": "https://api.github.com/users/jester91/starred{/owner}{/repo}"
+                                },
+                                {
+                                  "k": "subscriptions_url",
+                                  "v": "https://api.github.com/users/jester91/subscriptions"
+                                },
+                                {
+                                  "k": "type",
+                                  "v": "User"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/users/jester91"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/jester91/SnapCash/pull/1"
+                    },
+                    {
+                      "k": "id",
+                      "v": 867585710.0
+                    },
+                    {
+                      "k": "issue_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/issues/1"
+                    },
+                    {
+                      "k": "labels",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "locked",
+                      "v": false
+                    },
+                    {
+                      "k": "maintainer_can_modify",
+                      "v": false
+                    },
+                    {
+                      "k": "merge_commit_sha",
+                      "v": null
+                    },
+                    {
+                      "k": "mergeable",
+                      "v": null
+                    },
+                    {
+                      "k": "mergeable_state",
+                      "v": "unknown"
+                    },
+                    {
+                      "k": "merged",
+                      "v": false
+                    },
+                    {
+                      "k": "merged_at",
+                      "v": null
+                    },
+                    {
+                      "k": "merged_by",
+                      "v": null
+                    },
+                    {
+                      "k": "milestone",
+                      "v": null
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "PR_kwDOG24HIM4ztk6u"
+                    },
+                    {
+                      "k": "number",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "patch_url",
+                      "v": "https://github.com/jester91/SnapCash/pull/1.patch"
+                    },
+                    {
+                      "k": "rebaseable",
+                      "v": null
+                    },
+                    {
+                      "k": "requested_reviewers",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "requested_teams",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "review_comment_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/pulls/comments{/number}"
+                    },
+                    {
+                      "k": "review_comments",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "review_comments_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/pulls/1/comments"
+                    },
+                    {
+                      "k": "state",
+                      "v": "open"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/statuses/d74d0806120b8a94fa5a3034e097dfbc042f22dd"
+                    },
+                    {
+                      "k": "title",
+                      "v": "Adding github action"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2022-03-01T08:18:23Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/pulls/1"
+                    },
+                    {
+                      "k": "user",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/50679897?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/jester91/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/jester91/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/jester91/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/jester91/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/jester91"
+                          },
+                          {
+                            "k": "id",
+                            "v": 50679897.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "jester91"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjUwNjc5ODk3"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/jester91/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/jester91/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/jester91/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/jester91/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/jester91/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/jester91"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/jester91/SnapCash.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2022-02-16T22:14:29Z"
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": "Near App with Rust contract."
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "jester91/SnapCash"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/jester91/SnapCash.git"
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/jester91/SnapCash"
+                    },
+                    {
+                      "k": "id",
+                      "v": 460195616.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "SnapCash"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOG24HIA"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/50679897?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/jester91/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/jester91/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/jester91/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/jester91/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/jester91"
+                          },
+                          {
+                            "k": "id",
+                            "v": 50679897.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "jester91"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjUwNjc5ODk3"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/jester91/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/jester91/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/jester91/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/jester91/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/jester91/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/jester91"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": "2022-03-01T08:17:27Z"
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 558.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:jester91/SnapCash.git"
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/jester91/SnapCash"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2022-02-16T22:16:03Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/jester91/SnapCash"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/50679897?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/jester91/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/jester91/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/jester91/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/jester91/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/jester91"
+                    },
+                    {
+                      "k": "id",
+                      "v": 50679897.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "jester91"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjUwNjc5ODk3"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/jester91/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/jester91/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/jester91/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/jester91/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/jester91/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/jester91"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "1/merge"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        }
+      ]
+    },
+    "needs": {
+      "t": 2
+    },
+    "inputs": null,
+    "matrix": {
+      "t": 2,
+      "d": [
+        {
+          "k": "node-version",
+          "v": "16.x"
+        }
+      ]
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 1.0
+        },
+        {
+          "k": "job-total",
+          "v": 2.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 2.0
+        }
+      ]
+    }
+  }
+}
+[2022-03-01 08:25:36Z INFO JobRunner] Job ID c269f388-e93f-55df-e42c-8ad0a472b48b
+[2022-03-01 08:25:36Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/Jnh4HP2gntAOhbFpCKtbM7LlrJUii0gygp0biIHYmrNxLiU30N/
+[2022-03-01 08:25:36Z INFO ConfigurationStore] currentAssemblyLocation: D:\Projects\CashIO\snapCash\actions-runner\bin\Runner.Worker.dll
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:36Z INFO ConfigurationStore] binPath: D:\Projects\CashIO\snapCash\actions-runner\bin
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:36Z INFO ConfigurationStore] RootFolder: D:\Projects\CashIO\snapCash\actions-runner
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:36Z INFO HostContext] Well known config file 'Runner': 'D:\Projects\CashIO\snapCash\actions-runner\.runner'
+[2022-03-01 08:25:36Z INFO ConfigurationStore] ConfigFilePath: D:\Projects\CashIO\snapCash\actions-runner\.runner
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:36Z INFO HostContext] Well known config file 'Credentials': 'D:\Projects\CashIO\snapCash\actions-runner\.credentials'
+[2022-03-01 08:25:36Z INFO ConfigurationStore] CredFilePath: D:\Projects\CashIO\snapCash\actions-runner\.credentials
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:36Z INFO HostContext] Well known config file 'MigratedCredentials': 'D:\Projects\CashIO\snapCash\actions-runner\.credentials_migrated'
+[2022-03-01 08:25:36Z INFO ConfigurationStore] MigratedCredFilePath: D:\Projects\CashIO\snapCash\actions-runner\.credentials_migrated
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:36Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:36Z INFO HostContext] Well known config file 'Service': 'D:\Projects\CashIO\snapCash\actions-runner\.service'
+[2022-03-01 08:25:36Z INFO ConfigurationStore] ServiceConfigFilePath: D:\Projects\CashIO\snapCash\actions-runner\.service
+[2022-03-01 08:25:36Z INFO ConfigurationStore] Read setting file: 301 chars
+[2022-03-01 08:25:36Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-03-01 08:25:36Z INFO Worker] Listening for cancel message from the channel.
+[2022-03-01 08:25:36Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2022-03-01 08:25:37Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-03-01 08:25:37Z INFO JobServerQueue] Start process web console line queue.
+[2022-03-01 08:25:37Z INFO JobServerQueue] Start process file upload queue.
+[2022-03-01 08:25:37Z INFO JobServerQueue] Start process timeline update queue.
+[2022-03-01 08:25:37Z INFO ExecutionContext] Initialize GitHub context
+[2022-03-01 08:25:37Z INFO ExecutionContext] Initialize Env context
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Diag': 'D:\Projects\CashIO\snapCash\actions-runner\_diag'
+[2022-03-01 08:25:37Z INFO JobRunner] Starting the job execution context.
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO JobRunner] Validating directory permissions for: 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Tools': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash\_tool'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Temp': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash\_temp'
+[2022-03-01 08:25:37Z INFO JobRunner] Getting job extension.
+[2022-03-01 08:25:37Z INFO JobRunner] Initialize job. Getting all job steps.
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Diag': 'D:\Projects\CashIO\snapCash\actions-runner\_diag'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known config file 'Credentials': 'D:\Projects\CashIO\snapCash\actions-runner\.credentials'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known config file 'SetupInfo': 'D:\Projects\CashIO\snapCash\actions-runner\.setup_info'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO PipelineDirectoryManager] Loading tracking config if exists: D:\Projects\CashIO\snapCash\actions-runner\snapcash\_PipelineMapping\jester91/SnapCash\PipelineFolder.json
+[2022-03-01 08:25:37Z INFO PipelineDirectoryManager] Updating job run properties.
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO JobExtension] Downloading actions
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Actions': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash\_actions'
+[2022-03-01 08:25:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record '51710649-3c82-4e0a-a0b6-8b2ced13bd4c', success rate: 1/1.
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Actions': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash\_actions'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Work': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash'
+[2022-03-01 08:25:37Z INFO HostContext] Well known directory 'Actions': 'D:\Projects\CashIO\snapCash\actions-runner\snapcash\_actions'
+[2022-03-01 08:25:37Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/ec3a7ce113134d7a93b817d10a8272cb61118579' into D:\Projects\CashIO\snapCash\actions-runner\snapcash\_actions\_temp_a82a35f1-f9bf-45ce-aec3-d5e16e0cc3b5\7294288d-3310-4c56-8bd7-1f963ff6dd53.zip.
+[2022-03-01 08:25:37Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2022-03-01 08:25:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record '51710649-3c82-4e0a-a0b6-8b2ced13bd4c', success rate: 1/1.
+[2022-03-01 08:25:38Z INFO ProcessChannel] Receiving message of length 0, with hash 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+[2022-03-01 08:25:38Z INFO Worker] Cancellation/Shutdown message received.
+[2022-03-01 08:25:38Z INFO ActionManager] Action download has been cancelled.
+[2022-03-01 08:25:38Z ERR  JobExtension] Caught cancellation exception from JobExtension Initialization: System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at GitHub.Runner.Worker.ActionManager.DownloadRepositoryActionAsync(IExecutionContext executionContext, ActionDownloadInfo downloadInfo, String destDirectory)
+   at GitHub.Runner.Worker.ActionManager.DownloadRepositoryActionAsync(IExecutionContext executionContext, ActionDownloadInfo downloadInfo)
+   at GitHub.Runner.Worker.ActionManager.PrepareActionsRecursiveAsync(IExecutionContext executionContext, PrepareActionsState state, IEnumerable`1 actions, Int32 depth, Guid parentStepId)
+   at GitHub.Runner.Worker.ActionManager.PrepareActionsAsync(IExecutionContext executionContext, IEnumerable`1 steps, Guid rootStepId)
+   at GitHub.Runner.Worker.JobExtension.InitializeJob(IExecutionContext jobContext, AgentJobRequestMessage message)
+[2022-03-01 08:25:38Z ERR  JobRunner] Job is canceled during initialize.
+[2022-03-01 08:25:38Z ERR  JobRunner] Caught exception: System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at GitHub.Runner.Worker.ActionManager.DownloadRepositoryActionAsync(IExecutionContext executionContext, ActionDownloadInfo downloadInfo, String destDirectory)
+   at GitHub.Runner.Worker.ActionManager.DownloadRepositoryActionAsync(IExecutionContext executionContext, ActionDownloadInfo downloadInfo)
+   at GitHub.Runner.Worker.ActionManager.PrepareActionsRecursiveAsync(IExecutionContext executionContext, PrepareActionsState state, IEnumerable`1 actions, Int32 depth, Guid parentStepId)
+   at GitHub.Runner.Worker.ActionManager.PrepareActionsAsync(IExecutionContext executionContext, IEnumerable`1 steps, Guid rootStepId)
+   at GitHub.Runner.Worker.JobExtension.InitializeJob(IExecutionContext jobContext, AgentJobRequestMessage message)
+   at GitHub.Runner.Worker.JobRunner.RunAsync(AgentJobRequestMessage message, CancellationToken jobRequestCancellationToken)
+[2022-03-01 08:25:38Z INFO JobRunner] Shutting down the job server queue.
+[2022-03-01 08:25:38Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2022-03-01 08:25:39Z INFO JobServerQueue] All queue process task stopped.
+[2022-03-01 08:25:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record '51710649-3c82-4e0a-a0b6-8b2ced13bd4c', success rate: 1/1.
+[2022-03-01 08:25:39Z INFO JobServerQueue] Web console line queue drained.
+[2022-03-01 08:25:39Z INFO JobServerQueue] Uploading 2 files in one shot.
+[2022-03-01 08:25:40Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2022-03-01 08:25:40Z INFO JobServerQueue] File upload queue drained.
+[2022-03-01 08:25:40Z INFO JobServerQueue] Timeline update queue drained.
+[2022-03-01 08:25:40Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2022-03-01 08:25:40Z INFO TempDirectoryManager] Cleaning runner temp folder: D:\Projects\CashIO\snapCash\actions-runner\snapcash\_temp
+[2022-03-01 08:25:40Z INFO HostContext] Well known directory 'Bin': 'D:\Projects\CashIO\snapCash\actions-runner\bin'
+[2022-03-01 08:25:40Z INFO HostContext] Well known directory 'Root': 'D:\Projects\CashIO\snapCash\actions-runner'
+[2022-03-01 08:25:40Z INFO HostContext] Well known directory 'Diag': 'D:\Projects\CashIO\snapCash\actions-runner\_diag'
+[2022-03-01 08:25:40Z INFO HostContext] Well known config file 'Telemetry': 'D:\Projects\CashIO\snapCash\actions-runner\_diag\.telemetry'
+[2022-03-01 08:25:40Z INFO JobRunner] Raising job completed event.
